@@ -1,0 +1,10 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+public class TestRunner {
+	public static void main(String[] args) {
+		uiLayertemaprature ui = new uiLayertemaprature();
+		ui.uiLayer();
+	}
+
+}

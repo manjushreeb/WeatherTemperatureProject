@@ -1,0 +1,53 @@
+package com.qa.restAPI;
+
+import java.io.IOException;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+
+import com.qa.tempInterface.TemparatureInterface;
+import com.qa.testBase.TestBase;
+
+public class GetTemp extends TestBase implements TemparatureInterface{
+	//GET Method
+		private int get(String url) throws ClientProtocolException, IOException {
+			HttpClient httpClient = HttpClients.createDefault();
+			HttpGet httpGet = new HttpGet(prop.getProperty("restURL"));
+			httpClient.execute(httpGet); //hit the get url
+			HttpResponse httpResponse = httpClient.execute(httpGet);
+			int statusCode = httpResponse.getStatusLine().getStatusCode();
+			
+			System.out.println("StatusCode "+ statusCode);
+			
+			String responseString = EntityUtils.toString(httpResponse.getEntity(),"UTF-8");
+			JSONObject jsonResponse =new JSONObject(responseString);
+			
+			Double restTemp = jsonResponse.getJSONObject("main").getDouble("temp_max");
+			int apiTemp= (int) Math. round(restTemp - 273.15);
+			System.out.println(apiTemp);
+				
+			return apiTemp;
+		}
+
+		@Override
+		public float getTemperature(String city) {
+			float temperature = -1;
+			try {
+				temperature = this.get(city);
+			} catch (ClientProtocolException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return temperature;
+		}
+}

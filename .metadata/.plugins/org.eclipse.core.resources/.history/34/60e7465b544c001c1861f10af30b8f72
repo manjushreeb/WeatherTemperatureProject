@@ -1,0 +1,11 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+public class TestRunner {
+	public static void main(String[] args) throws Exception {
+		uiLayertemaprature ui = new uiLayertemaprature();
+		String uiResponse= ui.uiLayer();
+		apiLayerTemparature api = new apiLayerTemparature();
+	}
+
+}

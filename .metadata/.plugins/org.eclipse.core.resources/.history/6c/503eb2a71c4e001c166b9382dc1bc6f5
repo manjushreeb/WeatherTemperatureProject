@@ -1,0 +1,42 @@
+package com.qa.restAPI;
+
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+
+import com.qa.tempInterface.TemparatureInterface;
+import com.qa.testBase.TestBase;
+
+public class GetTemp extends TestBase implements TemparatureInterface{
+	//GET Method
+		private int get(String url) throws ClientProtocolException, IOException {
+			CloseableHttpClient httpClient = HttpClients.createDefault();
+			HttpGet httpGet = new HttpGet(prop.getProperty("restURL"));
+			httpClient.execute(httpGet); //hit the get url
+			CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+			int statusCode = httpResponse.getStatusLine().getStatusCode();
+			
+			System.out.println("StatusCode "+ statusCode);
+			
+			String responseString = EntityUtils.toString(httpResponse.getEntity(),"UTF-8");
+			JSONObject jsonResponse =new JSONObject(responseString);
+			
+			Double restTemp = jsonResponse.getJSONObject("main").getDouble("temp_max");
+			int apiTemp= (int) Math. round(restTemp - 273.15);
+			System.out.println(apiTemp);
+				
+			return apiTemp;
+		}
+
+		@Override
+		public float getTemperature(String city) {
+			int temperature = this.get(city);
+			return temperature;
+		}
+}

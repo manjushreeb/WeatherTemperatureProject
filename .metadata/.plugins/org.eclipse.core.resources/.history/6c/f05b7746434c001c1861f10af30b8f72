@@ -1,0 +1,22 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.support.ui.Sleeper;
+
+public class uiLayertemaprature {
+	
+
+	public void uiLayer() throws Exception {
+	WebDriver driver=new HtmlUnitDriver();
+	driver.get("https://www.accuweather.com");
+	String pageTitle = driver.getTitle();
+	System.out.print(pageTitle);
+	driver.findElement(By.name("query")).sendKeys("Bengaluru");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("///div[@class ='searchbar-content']/svg[1]/path")).click();
+	
+	}
+	       	
+	 
+
+}

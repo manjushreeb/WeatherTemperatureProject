@@ -1,0 +1,52 @@
+package com.qa.ui.pages;
+
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.qa.tempInterface.TemparatureInterface;
+import com.qa.ui.testBase.TestBase;
+
+public class SearchPage extends TestBase implements TemparatureInterface {
+	
+	//Page Factory
+	@FindBy(name = "query")
+	WebElement searchField;
+	
+	@FindBy(xpath = "//div[@class='searchbar-content']/*[local-name()='svg'][1]")
+	WebElement searchIcon;
+	
+	
+	public SearchPage() {
+		PageFactory.initElements(driver, this);	
+	}
+	
+	
+	//Actions
+	public static String ValidatePageTitle(){
+		return driver.getTitle();	
+	}
+	
+	public SearchResultPage Search(String city) {
+		System.out.println("What is the city name"+city);
+		searchField.sendKeys(city);
+		searchIcon.click();
+		
+		return new SearchResultPage();
+	}
+
+
+	@Override
+	public float getTemperature(String city)  {
+		// TODO Auto-generated method stub
+		float temperature = -1;
+		SearchResultPage searchresult = this.Search(city);
+		searchresult.getUITemp();
+		return temperature;
+	}
+		
+	
+}

@@ -1,0 +1,11 @@
+package com.qa.tests;
+
+import com.qa.pageBase.TestBase;
+
+public class searchPageTest extends TestBase {
+	
+	public searchPageTest() {
+		super();//initialises properties calls testBaseclss constructor
+	}
+
+}

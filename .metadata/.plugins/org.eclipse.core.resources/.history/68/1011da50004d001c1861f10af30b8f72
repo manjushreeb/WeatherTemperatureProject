@@ -1,0 +1,25 @@
+package com.qa.pageBase;
+
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestBase {
+	static WebDriver driver;
+	static Properties prop;
+	public TestBase() {
+		
+		prop =new Properties();
+		FileInputStream ip= new FileReader("src/main/java/com/qa/properties/config.properties")
+		
+		
+		System.setProperty("webdriver.gecko.driver","D:\\Temparature_project\\geckodriver.exe" );
+		//WebDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_78, true);
+		driver =new FirefoxDriver();
+		
+	}
+	
+}

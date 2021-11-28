@@ -1,0 +1,6 @@
+com\qa\ui\pages\SearchResultPage.class
+com\qa\ui\pages\SearchPage.class
+com\qa\ui\testBase\TestBase.class
+com\qa\restAPI\APIGetTemp.class
+com\qa\tempInterface\TemparatureInterface.class
+com\qa\util\TestUtil.class

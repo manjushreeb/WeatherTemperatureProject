@@ -1,0 +1,19 @@
+package com.qa.ui.tests;
+
+import com.qa.ui.pages.SearchResultPage;
+import com.qa.ui.testBase.TestBase;
+import com.qa.util.TestUtil;
+
+public class SearchResultPageTest extends TestBase  {
+	SearchResultPage srp;
+	
+public SearchResultPageTest() {
+	super();
+	
+}
+
+public float getTemp() {
+	return srp.getUITemp();
+	
+}
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.openqa.selenium.htmlunit.HtmlUnitDriver"/>
+    <fullyQualifiedTypeName name="TestRunner"/>
+    <fullyQualifiedTypeName name="uiLayertemaprature"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By.ByName"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Sleeper"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Wait"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+    <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.BrowserVersion"/>
+    <fullyQualifiedTypeName name="apiLayerTemparature"/>
+    <fullyQualifiedTypeName name="org.apache.http.impl.client.CloseableHttpClient"/>
+    <fullyQualifiedTypeName name="java.net.http.HttpClient"/>
+    <fullyQualifiedTypeName name="org.apache.http.impl.client.HttpClients"/>
+    <fullyQualifiedTypeName name="org.apache.http.client.methods.HttpGet"/>
+    <fullyQualifiedTypeName name="org.apache.http.client.methods.CloseableHttpResponse"/>
+    <fullyQualifiedTypeName name="org.apache.http.util.EntityUtils"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="comparetemparature"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+    <fullyQualifiedTypeName name="com.qa.pageBase.TestBase"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
+    <fullyQualifiedTypeName name="com.qa.tests.searchPageTest"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
+    <fullyQualifiedTypeName name="com.qa.pages.SearchResultPage"/>
+    <fullyQualifiedTypeName name="com.qa.pages.SearchPage"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.qa.util.TestUtil"/>
+    <fullyQualifiedTypeName name="com.qa.tempInterface.TemparatureInterface"/>
+    <fullyQualifiedTypeName name="com.qa.ui.testBase.TestBase"/>
+    <fullyQualifiedTypeName name="com.qa.ui.pages.SearchPage"/>
+    <fullyQualifiedTypeName name="com.qa.ui.pages.SearchResultPage"/>
+</qualifiedTypeNameHistroy>

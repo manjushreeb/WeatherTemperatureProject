@@ -1,0 +1,11 @@
+import org.openqa.selenium.WebDriver;
+
+public class restAPI {
+
+	public void get restAPI(String url) {
+		//GET temparature
+		
+		
+		return ;
+	}
+}

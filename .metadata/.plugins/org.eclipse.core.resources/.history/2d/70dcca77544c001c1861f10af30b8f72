@@ -1,0 +1,7 @@
+
+public class apiLayerTemparature {
+
+	public String apiLayerTemparature() throws Exception {
+		return ;
+	}
+}

@@ -1,0 +1,20 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+public class uiLayertemaprature {
+	
+
+	public void uiLayer() {
+	WebDriver driver=new HtmlUnitDriver();
+	driver.get("https://www.accuweather.com");
+	String pageTitle = driver.getTitle();
+	System.out.print(pageTitle);
+	driver.findElement(By.name("query")).sendKeys("Bengaluru");
+	driver.findElement(By.xpath("//svg[1]")).click();
+	
+	}
+	       	
+	 
+
+}

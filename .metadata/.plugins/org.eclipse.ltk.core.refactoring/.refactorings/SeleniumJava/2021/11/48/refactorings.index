@@ -1,0 +1,15 @@
+1637669567701	Rename type 'apiLayerTemparature'
+1637672899339	Rename type 'uiLayertemaprature'
+1637673516231	Rename type 'comparetemparature'
+1637741467996	Move package
+1637741852728	Rename type 'searchPage'
+1637841997414	Delete element
+1637842012418	Copy file
+1637863707289	Rename package 'com.qa.pageBase'
+1637867441677	Rename package 'com.qa.config'
+1637867465603	Rename package 'com.qa.pages'
+1637867491055	Rename package 'com.qa.testBase'
+1637867524694	Rename package 'com.qa.tests'
+1637907508821	Delete element
+1637909030042	Delete element
+1637918307859	Rename type 'GetTemp'

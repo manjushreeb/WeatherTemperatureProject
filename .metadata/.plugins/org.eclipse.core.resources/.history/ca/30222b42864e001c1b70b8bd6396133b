@@ -1,0 +1,66 @@
+package com.qa.ui.tests;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.qa.tempInterface.TemparatureInterface;
+import com.qa.ui.pages.SearchPage;
+import com.qa.ui.pages.SearchResultPage;
+import com.qa.ui.testBase.TestBase;
+
+public class searchPageTest extends TestBase implements TemparatureInterface  {
+	SearchPage sp;   
+	SearchResultPage srp;
+	
+	
+	public searchPageTest() {
+		super();//initialises properties calls testBaseclss constructor
+	}
+	
+	@BeforeMethod
+	public void setUp() {
+		initialSetUp();
+		sp = new SearchPage();
+		
+	}
+	@Test(priority = 1)
+	public void validateSearchPageTitle() {
+		String title = SearchPage.ValidatePageTitle();
+		Assert.assertEquals(title,"Local, National, & Global Daily Weather Forecast | AccuWeather","OnsearchPage");
+		System.out.println("validated "+title);
+		
+	}
+	public void validateSearchResultPageTitle(String city) {
+		String title = sp.Search(city);
+		Assert.assertEquals(title,"Local, National, & Global Daily Weather Forecast | AccuWeather","OnsearchPage");
+		System.out.println("validated "+title);
+		
+	}
+	
+	@Test(priority = 2)
+	public float searchCity(String city) {
+		System.out.println("Search for the city");
+		sp.Search(city);
+		float resultTemp = srp.getUITemp();
+		return resultTemp;
+	}
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+	@Override
+	public float getTemperature(String city) {
+		// TODO Auto-generated method stub
+		float temperature = -1;
+		temperature = this.searchCity(city);
+		return temperature;
+
+	}
+	
+	
+}

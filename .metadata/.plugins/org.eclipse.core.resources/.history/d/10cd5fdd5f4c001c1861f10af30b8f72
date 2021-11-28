@@ -1,0 +1,10 @@
+
+public class comparetemparature {
+	
+	
+
+	public void comparetemp(int uiTemp,int apiTemp) {
+		
+	}
+
+}

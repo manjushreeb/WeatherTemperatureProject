@@ -1,0 +1,47 @@
+package com.qa.pageBase;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestBase {
+	static WebDriver driver;
+	static Properties prop;
+	
+	public TestBase(){
+		
+		prop =new Properties();
+		try {
+			FileInputStream ip= new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/qa/config/config.properties");
+			prop.load(ip);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		System.setProperty("webdriver.gecko.driver","D:\\Temparature_project\\geckodriver.exe" );
+		//WebDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_78, true);
+		driver =new FirefoxDriver();
+		
+	}
+	
+	public static void initialSetUp() {
+		String browserName = prop.getProperty("browser");
+		if(browserName.equals("Firefox")) {
+			System.setProperty("webdriver.gecko.driver","D:\\Temparature_project\\geckodriver.exe" );
+			driver = new FirefoxDriver();
+		}
+		//other browsers can be added too
+		
+	}
+}

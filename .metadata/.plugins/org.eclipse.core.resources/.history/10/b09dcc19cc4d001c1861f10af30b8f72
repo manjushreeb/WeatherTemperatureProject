@@ -1,0 +1,20 @@
+package com.qa.tests;
+
+import org.testng.annotations.BeforeMethod;
+
+import com.qa.pageBase.TestBase;
+import com.qa.pages.SearchPage;
+
+public class searchPageTest extends TestBase {
+	
+	public searchPageTest() {
+		super();//initialises properties calls testBaseclss constructor
+	}
+	@BeforeMethod
+	public void setUp() {
+		
+		initialSetUp();
+		SearchPage sp = new SearchPage();
+		
+	}
+}

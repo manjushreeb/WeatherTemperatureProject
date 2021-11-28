@@ -1,0 +1,12 @@
+package com.qa.pages;
+
+import com.qa.pageBase.TestBase;
+
+public class SearchPage extends TestBase {
+	
+	//Page Factory
+	@FindBy()
+	
+	
+
+}

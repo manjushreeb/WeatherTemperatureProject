@@ -1,0 +1,49 @@
+package com.qa.ui.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.qa.tempInterface.TemparatureInterface;
+import com.qa.ui.testBase.TestBase;
+
+public class SearchResultPage extends TestBase implements TemparatureInterface{
+	
+	
+	@FindBy(xpath="//a[1]/div[@class ='cur-con-weather-card__body']/div[@class ='cur-con-weather-card__panel']/div/div/div[@class='temp']")
+	WebElement UItemp;
+	
+	SearchPage sp;
+	
+	public SearchResultPage() {
+		// TODO Auto-generated constructor stub
+		sp = new SearchPage();
+		PageFactory.initElements(driver, this);	
+		
+	}
+	
+		//Get the temparature
+	public int getUITemp() {
+		String uiTemp = UItemp.getText();
+		uiTemp = uiTemp.substring(0,2);
+		int uiTemp_int = Integer.parseInt(uiTemp);
+		return uiTemp_int;
+		
+	}
+	//validate result title
+	public String ValidateResultPageTitle(){
+		return driver.getTitle();	
+	}
+	
+	@Override
+	public float getTemperature(String city)  {
+		// TODO Auto-generated method stub
+		float temperature = -1;
+		this.searchResult=sp.Search(city);
+		temperature = searchResult.getUITemp();
+		System.out.println(temperature);
+		return temperature;
+	}
+
+	
+}

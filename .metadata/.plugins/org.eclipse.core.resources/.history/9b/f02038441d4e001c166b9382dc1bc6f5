@@ -1,0 +1,7 @@
+package com.qa.tempInterface;
+
+public interface TemparatureInterface {
+	
+	float getTemperature (String city);
+
+}

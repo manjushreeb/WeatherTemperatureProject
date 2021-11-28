@@ -1,0 +1,34 @@
+package com.qa.ui.tests;
+
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+
+import com.qa.tempInterface.TemparatureInterface;
+import com.qa.ui.pages.SearchResultPage;
+import com.qa.ui.testBase.TestBase;
+import com.qa.util.TestUtil;
+
+public class SearchResultPageTest extends TestBase implements TemparatureInterface  {
+	SearchResultPage srp;
+	
+public SearchResultPageTest() {
+	super();
+	
+}
+
+public float getTemp() {
+	return srp.getUITemp();
+	
+}
+
+@Override
+public float getTemperature(String city) {
+	// TODO Auto-generated method stub
+	return 0;
+}
+
+
+
+
+}

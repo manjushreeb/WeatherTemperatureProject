@@ -1,0 +1,14 @@
+
+public class comparetemparature {
+	
+	
+
+	public comparetemparature(int uiTemp, int apiTemp) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void comparetemp(int uiTemp,int apiTemp) {
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 25.936 s <<< FAILURE! - in TestSuite
+com.qa.ui.tests.searchPageTest.setUp  Time elapsed: 25.68 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Timeout loading page after 20000ms
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'LT14-DBR1-IND', ip: '172.20.10.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a914dc46-0f97-4341-9964-21013fa7b525, get {url=https://www.accuweather.com/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.15.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927121355, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 19096, moz:profile: C:\Users\DBR1\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a914dc46-0f97-4341-9964-21013fa7b525
+	at com.qa.ui.tests.searchPageTest.setUp(searchPageTest.java:24)
+

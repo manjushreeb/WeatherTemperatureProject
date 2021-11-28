@@ -1,0 +1,21 @@
+package com.qa.ui.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.qa.ui.testBase.TestBase;
+
+public class SearchResultPage extends TestBase {
+	
+	
+	@FindBy(xpath="//a[1]/div[@class ='cur-con-weather-card__body']/div[@class ='cur-con-weather-card__panel']/div/div/div[@class='temp']")
+	WebElement UItemp;
+	
+	public void getUITemp() {
+		String uiTemp = UItemp.getText();
+		 uiTemp = uiTemp.substring(0,2);
+		int uiTemp_int = Integer.parseInt(uiTemp);
+		
+	}
+	
+}

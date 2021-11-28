@@ -1,0 +1,5 @@
+package com.qa.ui.tests;
+
+public class SearchResultPageTest {
+
+}

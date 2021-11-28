@@ -1,0 +1,7 @@
+uiLayer.class
+com\qa\ui\tests\searchResultPageTest.class
+compareTemparature.class
+com\qa\ui\tests\searchPageTest.class
+com\qa\ui\tests\TestRunner.class
+restAPI.class
+TestRunner.class

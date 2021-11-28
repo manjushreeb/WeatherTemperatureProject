@@ -1,0 +1,15 @@
+package com.qa.pageBase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestBase {
+	static WebDriver driver;
+	public TestBase() {
+		System.setProperty("webdriver.gecko.driver","D:\\Temparature_project\\geckodriver.exe" );
+		//WebDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_78, true);
+		driver =new FirefoxDriver();
+		
+	}
+	
+}

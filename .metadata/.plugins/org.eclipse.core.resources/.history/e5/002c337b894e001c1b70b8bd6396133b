@@ -1,0 +1,13 @@
+package com.qa.ui.tests;
+
+import com.qa.ui.pages.SearchPage;
+import com.qa.ui.pages.SearchResultPage;
+
+public class searchResultPageTest {
+	SearchResultPage srp ;
+	
+	public searchResultPageTest() {
+		super();
+		}
+
+}
